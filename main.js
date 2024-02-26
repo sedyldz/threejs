@@ -1,4 +1,4 @@
-import * as THREE from "three";
+//import * as THREE from "three";
 
 const gridSizeX = 35;
 const gridSizeY = 35;
