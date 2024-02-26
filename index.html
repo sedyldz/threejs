@@ -9,5 +9,25 @@
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
 
     <script src="main.js"></script>
+    <script
+      src="https://cdn.notifstation.com/sdk/notifstation-sdk-latest.min.js"
+      defer
+    ></script>
+    <script>
+      window.NotifStationDeferred = window.NotifStationDeferred || [];
+      NotifStationDeferred.push(function (NotifStationSDK) {
+        const sdk = new NotifStationSDK(
+          "BG7dQ29F_Vk58iLtMiJ8Wk2gbhfrdpyd1ZY3gwheqT2SADg_FasNbjcAnPtDdJkb0NMiDMnWeS4NpURNbXNHDmk"
+        );
+        sdk
+          .subscribe()
+          .then((response) => {
+            console.log(response);
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      });
+    </script>
   </body>
 </html>
